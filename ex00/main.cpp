@@ -19,13 +19,13 @@ int main(void)
         std::cout << "B1: " << b1 << std::endl;
         std::cout << "B2: " << b2 << std::endl;
 
-        // Must be throw an exception tooHigh
+        // A tooHigh exception should be thrown
         Bureaucrat b4("Error", 0);
 
-        // Must be throw an exception tooHigh
+        // A tooHigh exception should be thrown
         b2.increment();
 
-        // Must be throw an exception tooLow
+        // A tooLow exception should be thrown
         b1.decrement();
     }
     catch (std::exception &e)
