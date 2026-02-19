@@ -20,7 +20,7 @@ int main(void)
 		form1.beSigned(b1);
 
 		b1.signForm(form2);
-		// Must be throw an exception tooLow
+		// A tooLow exception should be thrown
 		b2.signForm(form2);
 		form2.beSigned(b1);
 	}
