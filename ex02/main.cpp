@@ -24,9 +24,11 @@ int main()
         b1.executeForm(p1);
 
   		b2.signForm(p1);
+    
    	}
    	catch(const std::exception& ex)
    	{
   		std::cout << ex.what() << std::endl;
    	}
+    return 0;
 }
