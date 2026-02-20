@@ -73,12 +73,24 @@ void Bureaucrat::signForm(AForm &aform)
     try
     {
         aform.beSigned(*this);
-        std::cout << "Bureaucrat " << this->getName() << " signed form " 
+        std::cout << "Bureaucrat " << this->getName() << " signed form "
             << aform.getName() << std::endl;
     }
     catch (std::exception &e)
     {
-        std::cout << "Bureaucrat " << this->getName() << " could not sign form " 
+        std::cout << "Bureaucrat " << this->getName() << " could not sign form "
             << aform.getName() << " because grade is too low" << std::endl;
+    }
+}
+
+void Bureaucrat::executeForm(const AForm &form) const
+{
+    try
+    {
+        std::cout << "Bureaucrat " << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch (AForm::FormNotSigned &ex)
+    {
+        std::cout << "Bureaucrat " << this->getName() << " could not execute form " << form.getName() << std::endl;
     }
 }
