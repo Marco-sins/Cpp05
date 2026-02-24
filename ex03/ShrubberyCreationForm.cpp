@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmembril <mmembril@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/24 12:04:12 by mmembril          #+#    #+#             */
+/*   Updated: 2026/02/24 12:52:55 by mmembril         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ShrubberyCreationForm.hpp"
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
@@ -22,7 +34,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &b) const
     if (b.getGrade() > this->getGradeExecuteIt())
         throw AForm::GradeTooLowException();
     std::ofstream file;
-    file.open((_target + "_shrubbery").c_str());
+    file.open((_target + "_shrubbery").c_str(), std::ofstream::out | std::ofstream::app);
     file << "       ^       \n"
     "      / \\      \n"
     "     /   \\     \n"
@@ -31,6 +43,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &b) const
     "  /_________\\  \n"
     "      | |      \n"
     "      |_|      \n";
+    file.close(); 
 }
 
 std::ostream &operator<<(std::ostream &os, const ShrubberyCreationForm &form)

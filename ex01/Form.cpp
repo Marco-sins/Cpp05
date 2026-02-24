@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmembril <mmembril@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/24 12:03:34 by mmembril          #+#    #+#             */
+/*   Updated: 2026/02/24 12:18:46 by mmembril         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 #include <csignal>
@@ -70,7 +82,6 @@ std::ostream &operator<<(std::ostream &os, const Form &form)
     if (form.getSigned())
         os << "signed";
     else
-     os << "not signed";
-    os << std::endl;
+        os << "not signed";
     return os;
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmembril <mmembril@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/24 12:03:43 by mmembril          #+#    #+#             */
+/*   Updated: 2026/02/24 12:39:08 by mmembril         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include <exception>
@@ -87,6 +99,7 @@ void Bureaucrat::executeForm(const AForm &form) const
 {
     try
     {
+        form.execute(*this);
         std::cout << "Bureaucrat " << this->getName() << " executed " << form.getName() << std::endl;
     }
     catch (AForm::FormNotSigned &ex)

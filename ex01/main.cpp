@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmembril <mmembril@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/24 12:03:36 by mmembril          #+#    #+#             */
+/*   Updated: 2026/02/24 12:15:46 by mmembril         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.hpp"
 
 int main(void)
 {
     Form form1("Form1");
     Form form2("Form2", 3, 1);
-	std::cout << form1;
-	std::cout << form2;
+	std::cout << form1 << std::endl;
+	std::cout << form2 << std::endl;
 
 
 	Bureaucrat b1("Marco", 5);
 	Bureaucrat b2("Ernesto", 1);
-	std::cout << b1;
-	std::cout << b2;
+	std::cout << b1 << std::endl;
+	std::cout << b2 << std::endl;
 
 	try
 	{

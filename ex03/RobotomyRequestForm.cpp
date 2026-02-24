@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmembril <mmembril@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/24 12:04:09 by mmembril          #+#    #+#             */
+/*   Updated: 2026/02/24 13:12:47 by mmembril         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "RobotomyRequestForm.hpp"
 #include "AForm.hpp"
@@ -26,7 +38,9 @@ void RobotomyRequestForm::execute(const Bureaucrat &b) const
     if (!this->getSigned())
         throw AForm::FormNotSigned();
     std::cout << "* VRRRRRRR... BZZZZZZZZ... DRILLING NOISES *" << std::endl;
-    if ((std::rand() % 2) == 0)
+    std::srand(std::time(NULL));
+    int ran = std::rand();
+    if (ran % 2 == 0)
         std::cout << this->_target << " has been robotomized" << std::endl;
     else
         std::cout << "Failed to robotimize " << this->_target << std::endl;

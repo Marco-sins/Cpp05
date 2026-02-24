@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmembril <mmembril@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/24 12:04:13 by mmembril          #+#    #+#             */
+/*   Updated: 2026/02/24 12:53:04 by mmembril         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
@@ -5,6 +17,7 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 #include <ostream>
+#include <fstream>
 
 class ShrubberyCreationForm : public AForm
 {
